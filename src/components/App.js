@@ -1,24 +1,24 @@
 
 import React from "react";
-import { useState } from "react";
 import './../styles/App.css';
+import { useState } from "react";
 
-const App = () => {
-  const [change, setChange] = useState("");
-  function handleChange(e){
+
+function App() {
+  const [change, setChange] = useState();
+  function makeChange(e) {
     setChange(e.target.value);
   }
   return (
-    <div>
-        {/* Do not remove the main div */}
-        <label>Enter your name</label>
-        <input
-        value={change}
-        onChange ={handleChange()}
-        />
-        {change.trim() !== "" ? <p>Hello {change}!</p> : null}
+    <div className="App">
+      <label>Enter your name:</label>
+      <input 
+      value={change}
+      onChange={makeChange}
+      />
+      {change.trim() !== "" ? <p>Hello, {change}!</p> : null}
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
