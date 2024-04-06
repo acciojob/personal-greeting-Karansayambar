@@ -1,7 +1,7 @@
 
 import React from "react";
 import './../styles/App.css';
-import React, { useState } from "react";
+import {React, useState } from "react";
 
 function App() {
   const [change, setChange] = useState("");
